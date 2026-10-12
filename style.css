@@ -1,0 +1,218 @@
+/* Shared styles for index.html and games.html. */
+:root {
+  --cream: #faf4e8;
+  --paper: #fffaf1;
+  --brown: #4b3228;
+  --ink: #35271f;
+  --muted: #705b4d;
+  --line: #d8c9b5;
+  --sage: #e1e6d8;
+  --sage-dark: #405542;
+  --red: #a9362f;
+  --blue: #315c86;
+  --yellow: #e9b94e;
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--cream);
+  color: var(--ink);
+  font-family: "Trebuchet MS", Arial, sans-serif;
+  font-size: 1rem;
+  line-height: 1.65;
+}
+img { display: block; max-width: 100%; height: auto; }
+a { color: var(--brown); text-underline-offset: 0.22em; }
+a:hover { color: var(--red); }
+a:focus-visible {
+  outline: 3px solid var(--blue);
+  outline-offset: 5px;
+  border-radius: 3px;
+}
+h1, h2, h3, p, figure, dl { margin: 0; }
+h1, h2, h3 {
+  color: var(--brown);
+  font-family: Georgia, "Times New Roman", serif;
+  line-height: 1.15;
+  text-wrap: balance;
+}
+h1 { font-size: clamp(2.5rem, 5vw, 4.75rem); letter-spacing: -0.035em; }
+h2 { font-size: clamp(2rem, 3.6vw, 3.25rem); letter-spacing: -0.025em; }
+h3 { font-size: 1.5rem; }
+p + p { margin-top: 1rem; }
+.container { width: min(100% - 3rem, 1160px); margin-inline: auto; }
+.section { padding-block: clamp(3rem, 7vw, 6rem); }
+.section-heading { max-width: 720px; margin-bottom: 2.5rem; }
+.section-heading > p:last-child { margin-top: 1rem; color: var(--muted); }
+.eyebrow {
+  margin-bottom: 1rem;
+  color: var(--sage-dark);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
+.skip-link {
+  position: absolute;
+  top: 0.5rem;
+  left: 1rem;
+  z-index: 10;
+  padding: 0.75rem 1rem;
+  background: var(--paper);
+  transform: translateY(-180%);
+}
+.skip-link:focus { transform: translateY(0); }
+
+/* A simple shared header: all navigation stays visible on small screens. */
+.site-header { background: var(--paper); border-bottom: 1px solid var(--line); }
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding-block: 1.1rem;
+}
+.brand { display: block; flex-shrink: 0; }
+.brand-logo { width: 180px; max-height: 90px; object-fit: contain; }
+.main-nav ul, .site-footer nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 1.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.main-nav a {
+  display: inline-block;
+  padding-block: 0.65rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+.main-nav a[aria-current="page"] {
+  text-decoration: underline;
+  text-decoration-color: var(--red);
+  text-decoration-thickness: 3px;
+  text-underline-offset: 0.5rem;
+}
+
+.hero-layout, .about-layout, .visit-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: clamp(2rem, 5vw, 4.5rem);
+  align-items: center;
+}
+.intro { max-width: 48ch; margin-top: 1.5rem; font-size: 1.15rem; }
+.hero-links { display: flex; flex-wrap: wrap; gap: 0.8rem; margin-top: 2rem; }
+.button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 48px;
+  padding: 0.75rem 1.2rem;
+  border: 1px solid var(--brown);
+  border-radius: 6px;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+}
+.button-primary { background: var(--brown); color: var(--cream); }
+.button-primary:hover { background: var(--sage-dark); color: var(--paper); border-color: var(--sage-dark); }
+.button-secondary { background: transparent; }
+.button-secondary:hover { background: var(--sage); color: var(--brown); }
+.hero-note { margin-top: 1.25rem; color: var(--muted); font-size: 0.9rem; }
+.hero-photo img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  background: var(--sage);
+  border-radius: 100px 100px 12px 12px;
+}
+.hero-photo figcaption { margin-top: 0.8rem; color: var(--muted); font-size: 0.85rem; }
+.about { background: var(--sage); }
+.about-layout { align-items: start; }
+.text-link { display: inline-block; margin-top: 1.25rem; font-weight: 700; }
+
+/* Menu cards and the smaller price list. */
+.popular-grid, .event-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+.menu-card { background: var(--paper); border: 1px solid var(--line); border-radius: 12px; overflow: hidden; }
+.menu-card > img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; background: var(--sage); }
+.menu-card-copy { display: flex; align-items: start; justify-content: space-between; gap: 1rem; padding: 1.4rem; }
+.menu-card h3 { font-size: 1.3rem; }
+.price { flex-shrink: 0; color: var(--sage-dark); font-weight: 700; font-variant-numeric: tabular-nums; }
+.menu-more { margin-top: 2.5rem; padding-top: 2rem; border-top: 1px solid var(--line); }
+.menu-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 3rem; margin-top: 1rem; }
+.menu-list > div { display: flex; justify-content: space-between; gap: 1rem; padding-block: 0.8rem; border-bottom: 1px solid var(--line); }
+.menu-list dd { margin: 0; white-space: nowrap; font-variant-numeric: tabular-nums; }
+
+.events { background: var(--paper); border-block: 1px solid var(--line); }
+.event-card { padding: 1.75rem; border-top: 4px solid var(--blue); background: var(--cream); border-radius: 4px 4px 12px 12px; }
+.event-card:nth-child(3) { border-top-color: var(--yellow); }
+.event-featured { border-top-color: var(--red); background: var(--sage); }
+.event-label { margin-bottom: 0.75rem; color: var(--sage-dark); font-size: 0.8rem; font-weight: 700; }
+.event-time { margin-block: 1rem; color: var(--brown); font-size: 0.95rem; font-weight: 700; }
+
+.visit-layout { align-items: start; }
+address { margin-top: 1.25rem; font-style: normal; }
+address a { overflow-wrap: anywhere; }
+.contact-label { color: var(--muted); font-size: 0.85rem; }
+table { width: 100%; border-collapse: collapse; text-align: left; }
+caption { padding-bottom: 1.1rem; color: var(--brown); font-family: Georgia, "Times New Roman", serif; font-size: 1.5rem; font-weight: 700; text-align: left; }
+th, td { padding: 0.9rem 1rem; border-bottom: 1px solid var(--line); vertical-align: top; }
+thead th { background: var(--brown); color: var(--cream); font-size: 0.9rem; }
+tbody th { font-weight: 700; }
+tbody tr:nth-child(even) { background: #efe7d9; }
+.hours-table td { font-variant-numeric: tabular-nums; }
+.closed-day td { color: var(--red); font-weight: 700; }
+
+/* Game shelf: a clear, readable table with no extra controls. */
+.games .section-heading { max-width: 780px; }
+.games-table { table-layout: fixed; }
+.games-table th:first-child { width: 42%; }
+.games-table th:nth-child(2) { width: 20%; }
+.games-table td { font-variant-numeric: tabular-nums; }
+.games-table caption { font-family: "Trebuchet MS", Arial, sans-serif; font-size: 1rem; color: var(--muted); font-weight: 400; }
+.table-wrapper { min-width: 0; }
+
+.site-footer { padding-block: 2.5rem; background: var(--brown); color: var(--cream); }
+.footer-inner { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 1.5rem 3rem; }
+.site-footer p { max-width: 34ch; }
+.site-footer nav a { display: inline-block; padding-block: 0.5rem; color: var(--cream); font-size: 0.9rem; }
+.site-footer nav a:hover { color: var(--yellow); }
+.site-footer a:focus-visible { outline-color: var(--yellow); }
+
+@media (max-width: 900px) {
+  .hero-layout { grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr); gap: 2rem; }
+  .event-grid { grid-template-columns: 1fr; }
+  .menu-card-copy { flex-direction: column; gap: 0.6rem; }
+}
+@media (max-width: 700px) {
+  .container { width: min(100% - 2rem, 1160px); }
+  .header-inner { flex-direction: column; gap: 0.5rem; }
+  .main-nav ul { justify-content: center; gap: 0.3rem 1.25rem; }
+  .hero-layout, .about-layout, .visit-layout, .popular-grid, .menu-list { grid-template-columns: 1fr; }
+  .hero-photo img { aspect-ratio: 4 / 3; border-radius: 48px 48px 12px 12px; }
+  .menu-card-copy { flex-direction: row; }
+  .hero-links > a { flex: 1 1 200px; }
+  .section-heading { margin-bottom: 2rem; }
+  th, td { padding: 0.8rem 0.6rem; }
+  .games-table { font-size: 0.9rem; }
+  .games-table th:first-child { width: 38%; }
+  .games-table th:nth-child(2) { width: 22%; }
+  .games-table thead th { font-size: 0.8rem; overflow-wrap: anywhere; }
+  .footer-inner { flex-direction: column; }
+}
+@media print {
+  body, .section, .site-header, .site-footer { background: white; color: black; }
+  .skip-link, .hero-links, .main-nav, .site-footer nav { display: none; }
+  .section { padding-block: 1.5rem; }
+  .container { width: 100%; }
+  .hero-photo img { max-height: 250px; object-fit: contain; }
+  thead th { background: transparent; color: black; }
+  .event-card, .menu-card { break-inside: avoid; }
+}
