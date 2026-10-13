@@ -13,11 +13,14 @@
 
   <header class="site-header">
     <div class="container header-inner">
-      <div class="brand">
-        <object class="brand-logo" data="images/sidequest-logo.pdf" type="application/pdf" width="180" height="90" aria-label="Side Quest Coffee Co. logo showing a steaming coffee cup on a colorful game board">
-          <a href="images/sidequest-logo.pdf">View the Side Quest Coffee Co. logo: a steaming coffee cup on a colorful game board.</a>
-        </object>
-      </div>
+      <a class="brand" href="index.html" aria-label="Side Quest Coffee Co. home">
+        <img
+          class="brand-logo"
+          src="images/sidequest-logo.png"
+          alt="Side Quest Coffee Co. logo featuring a steaming coffee cup on a colorful board game"
+        >
+      </a>
+
       <nav class="main-nav" aria-label="Main navigation">
         <ul>
           <li><a href="index.html" aria-current="page">Home</a></li>
@@ -34,14 +37,21 @@
           <p class="eyebrow">Juniper Falls, Texas · Coffee &amp; tabletop games</p>
           <h1 id="hero-heading">Good coffee.<br>Room for a little side quest.</h1>
           <p class="intro">A cozy coffee shop with shelves of games, something good to eat, and a big community table. Come for a latte. Stay for one more round.</p>
+
           <div class="hero-links">
             <a class="button button-primary" href="#visit">Find your way here</a>
             <a class="button button-secondary" href="games.html">Explore the game shelf</a>
           </div>
+
           <p class="hero-note">No game experience needed. Just pull up a chair.</p>
         </div>
+
         <figure class="hero-photo">
-          <img src="images/generate-the-image-of-a-cozy-coffee-shop-that-has.png" alt="Cozy café with a large wooden community table, mismatched chairs, plants beside tall windows, and shelves of books and tabletop games against a brick wall" fetchpriority="high">
+          <img
+            src="images/generate-the-image-of-a-cozy-coffee-shop-that-has.png"
+            alt="Cozy café with a large wooden community table, mismatched chairs, plants beside tall windows, and shelves of books and tabletop games against a brick wall"
+            fetchpriority="high"
+          >
           <figcaption>A little coffee, a little friendly competition, a place to settle in.</figcaption>
         </figure>
       </div>
@@ -53,6 +63,7 @@
           <p class="eyebrow">Your kind of gathering place</p>
           <h2 id="about-heading">You don’t have to be “a board-game person.”</h2>
         </div>
+
         <div class="about-copy">
           <p>Some people here play every week. Some haven’t played anything since Monopoly when they were ten. Both are fine. There’s room for all ages, a quiet coffee break, a catch-up with friends, or a game with someone new.</p>
           <p>Think warm wood tables, mismatched chairs that somehow work together, plants in the windows, and shelves full of board games, cards, dice, and chess sets. Cards and game pieces are always part of the scenery. The big community table sits right in the middle of it all.</p>
@@ -68,37 +79,65 @@
           <h2 id="menu-heading">Most popular</h2>
           <p>Coffee, a cozy cup of chai, breakfast, and snacks for the table.</p>
         </div>
-        <!-- Add these food and drink photos to images/ when preparing the assets. -->
+
+        <!-- Place these food and drink photos inside the images folder. -->
         <div class="popular-grid">
           <article class="menu-card">
-            <img src="images/maple-latte.jpg" alt="A maple latte served in a ceramic cup" loading="lazy">
+            <img
+              src="images/maple-latte.jpg"
+              alt="A maple latte served in a ceramic cup"
+              loading="lazy"
+            >
             <div class="menu-card-copy">
               <h3>Maple latte</h3>
               <p class="price">$5.25</p>
             </div>
           </article>
+
           <article class="menu-card">
-            <img src="images/cinnamon-roll.jpg" alt="A cinnamon roll on a café plate" loading="lazy">
+            <img
+              src="images/cinnamon-roll.jpg"
+              alt="A cinnamon roll on a café plate"
+              loading="lazy"
+            >
             <div class="menu-card-copy">
               <h3>Cinnamon roll</h3>
               <p class="price">$4.00</p>
             </div>
           </article>
+
           <article class="menu-card">
-            <img src="images/breakfast-sandwich.jpg" alt="An egg and cheddar breakfast sandwich on a plate" loading="lazy">
+            <img
+              src="images/breakfast-sandwich.jpg"
+              alt="An egg and cheddar breakfast sandwich on a plate"
+              loading="lazy"
+            >
             <div class="menu-card-copy">
               <h3>Egg and cheddar breakfast sandwich</h3>
               <p class="price">$6.50</p>
             </div>
           </article>
         </div>
+
         <div class="menu-more">
           <h3>Also on the menu</h3>
           <dl class="menu-list">
-            <div><dt>Drip coffee</dt><dd>$3.25</dd></div>
-            <div><dt>Cold brew</dt><dd>$4.50</dd></div>
-            <div><dt>Chai latte</dt><dd>$4.75</dd></div>
-            <div><dt>Soft pretzel with mustard</dt><dd>$5.50</dd></div>
+            <div>
+              <dt>Drip coffee</dt>
+              <dd>$3.25</dd>
+            </div>
+            <div>
+              <dt>Cold brew</dt>
+              <dd>$4.50</dd>
+            </div>
+            <div>
+              <dt>Chai latte</dt>
+              <dd>$4.75</dd>
+            </div>
+            <div>
+              <dt>Soft pretzel with mustard</dt>
+              <dd>$5.50</dd>
+            </div>
           </dl>
         </div>
       </div>
@@ -111,21 +150,36 @@
           <h2 id="events-heading">Good company is on the calendar.</h2>
           <p>A few recurring reasons to stop by. Beginners belong at every table.</p>
         </div>
+
         <div class="event-grid">
           <article class="event-card event-featured">
             <p class="event-label">Our biggest regular gathering</p>
             <h3>Open Table Thursday</h3>
-            <p class="event-time">Every Thursday · <time datetime="18:30">6:30</time> to <time datetime="21:30">9:30 PM</time></p>
+            <p class="event-time">
+              Every Thursday ·
+              <time datetime="18:30">6:30 PM</time> to
+              <time datetime="21:30">9:30 PM</time>
+            </p>
             <p>Bring your own games or grab something from our shelves. Come with friends or come alone; there’s a place for you at the table.</p>
           </article>
+
           <article class="event-card">
             <h3>Chess &amp; Coffee</h3>
-            <p class="event-time">Every Sunday · <time datetime="11:00">11:00 AM</time> to <time datetime="13:00">1:00 PM</time></p>
+            <p class="event-time">
+              Every Sunday ·
+              <time datetime="11:00">11:00 AM</time> to
+              <time datetime="13:00">1:00 PM</time>
+            </p>
             <p>Casual chess and a cup of coffee. You absolutely do not have to be good at chess.</p>
           </article>
+
           <article class="event-card">
             <h3>Learn-a-Game Night</h3>
-            <p class="event-time">First Wednesday of each month · <time datetime="19:00">7:00</time> to <time datetime="20:30">8:30 PM</time></p>
+            <p class="event-time">
+              First Wednesday of each month ·
+              <time datetime="19:00">7:00 PM</time> to
+              <time datetime="20:30">8:30 PM</time>
+            </p>
             <p>A staff member picks a game and teaches it. Especially good if tabletop games sound fun but you don’t know where to start.</p>
           </article>
         </div>
@@ -139,29 +193,64 @@
           <h2 id="visit-heading">Come on over.</h2>
           <p>Find us on Lantern Lane. Our hours vary by day, and Tuesdays are closed.</p>
         </div>
+
         <div class="visit-layout">
           <div class="contact-details">
             <h3>Find &amp; contact us</h3>
             <address>
-              <p>Side Quest Coffee Co.<br>17 Lantern Lane, Juniper Falls, TX 71234</p>
-              <p><span class="contact-label">Phone</span><br><a href="tel:+15550137712">(555) 013-7712</a></p>
-              <p><span class="contact-label">Email</span><br><a href="mailto:hello@sidequestcoffee.example">hello@sidequestcoffee.example</a></p>
+              <p>
+                Side Quest Coffee Co.<br>
+                17 Lantern Lane, Juniper Falls, TX 71234
+              </p>
+              <p>
+                <span class="contact-label">Phone</span><br>
+                <a href="tel:+15550137712">(555) 013-7712</a>
+              </p>
+              <p>
+                <span class="contact-label">Email</span><br>
+                <a href="mailto:hello@sidequestcoffee.example">hello@sidequestcoffee.example</a>
+              </p>
             </address>
           </div>
+
           <div class="hours">
             <table class="hours-table">
               <caption>Business hours</caption>
               <thead>
-                <tr><th scope="col">Day</th><th scope="col">Hours</th></tr>
+                <tr>
+                  <th scope="col">Day</th>
+                  <th scope="col">Hours</th>
+                </tr>
               </thead>
               <tbody>
-                <tr><th scope="row">Monday</th><td>7:00 AM to 9:00 PM</td></tr>
-                <tr class="closed-day"><th scope="row">Tuesday</th><td>CLOSED</td></tr>
-                <tr><th scope="row">Wednesday</th><td>7:00 AM to 9:00 PM</td></tr>
-                <tr><th scope="row">Thursday</th><td>7:00 AM to 9:30 PM</td></tr>
-                <tr><th scope="row">Friday</th><td>7:00 AM to 10:00 PM</td></tr>
-                <tr><th scope="row">Saturday</th><td>8:00 AM to 10:00 PM</td></tr>
-                <tr><th scope="row">Sunday</th><td>10:00 AM to 6:00 PM</td></tr>
+                <tr>
+                  <th scope="row">Monday</th>
+                  <td>7:00 AM to 9:00 PM</td>
+                </tr>
+                <tr class="closed-day">
+                  <th scope="row">Tuesday</th>
+                  <td>CLOSED</td>
+                </tr>
+                <tr>
+                  <th scope="row">Wednesday</th>
+                  <td>7:00 AM to 9:00 PM</td>
+                </tr>
+                <tr>
+                  <th scope="row">Thursday</th>
+                  <td>7:00 AM to 9:30 PM</td>
+                </tr>
+                <tr>
+                  <th scope="row">Friday</th>
+                  <td>7:00 AM to 10:00 PM</td>
+                </tr>
+                <tr>
+                  <th scope="row">Saturday</th>
+                  <td>8:00 AM to 10:00 PM</td>
+                </tr>
+                <tr>
+                  <th scope="row">Sunday</th>
+                  <td>10:00 AM to 6:00 PM</td>
+                </tr>
               </tbody>
             </table>
           </div>
@@ -186,4 +275,3 @@
   </footer>
 </body>
 </html>
-
